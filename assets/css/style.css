@@ -1132,7 +1132,7 @@ blockquote {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #f7f7f7;
+  background: #ffffff;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1621,7 +1621,7 @@ blockquote {
 }
 
 .download-button .download-button-container i {
-  margin-left: .8vw;
+  margin-left: .4vw;
   transition: all linear .3s;
 }
 
@@ -1635,7 +1635,7 @@ blockquote {
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 990px) {
   .download-button {
     display: flex;
     justify-content: center;
