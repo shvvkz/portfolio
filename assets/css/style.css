@@ -1604,3 +1604,40 @@ blockquote {
     margin-right: 0;
   }
 }
+
+.download-button {
+  display: flex;
+  margin-top: 1.5vh;
+}
+
+.download-button .download-button-container {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: 2px solid #69069e;
+  border-radius: 50px;
+  color: #69069e;
+  transition: all linear .3s;
+}
+
+.download-button .download-button-container i {
+  margin-left: 1vw;
+}
+
+.download-button .download-button-container:hover {
+  background-color: #69069e;
+  color: #ffffff;
+}
+
+.download-button .download-button-container:hover i {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .download-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5vh;
+  }
+}
