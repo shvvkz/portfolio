@@ -1621,7 +1621,8 @@ blockquote {
 }
 
 .download-button .download-button-container i {
-  margin-left: 1vw;
+  margin-left: .8vw;
+  transition: all linear .3s;
 }
 
 .download-button .download-button-container:hover {
