@@ -370,7 +370,6 @@
 </body>
 
 <script>
-  console.log("yo")
 
 var cookie_darkmode = false;
 
@@ -384,6 +383,8 @@ if (document.cookie != ""){
 
 if(cookie_darkmode == true){
   //header dark
+  console.log("Loading darkmode..")
+  
   document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
   document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
   
@@ -510,7 +511,6 @@ button_darkmode.addEventListener("click", function() {
     document.cookie = "darkmode=false; path=/"
     lightmode()
   } 
-  console.log(cookie_darkmode,document.cookie)
  });
 
 function darkmode(){

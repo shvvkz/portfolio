@@ -105,6 +105,19 @@
     onscroll(document, toggleBacktotop)
   }
 
+  let btndarmode = select('.darkmode')
+  if (btndarmode) {
+    const toggledarkmode = () => {
+      if (window.scrollY > 100) {
+        btndarmode.classList.add('active')
+      } else {
+        btndarmode.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggledarkmode)
+    onscroll(document, toggledarkmode)
+  }
+
   /**
    * Mobile nav toggle
    */
