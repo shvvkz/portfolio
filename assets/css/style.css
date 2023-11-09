@@ -518,7 +518,7 @@ p {
   right: 15px;
 }
 
-.navbar-mobile ul {
+.navbar-mobile .ul-light {
   display: block;
   position: absolute;
   top: 55px;
@@ -531,17 +531,44 @@ p {
   overflow-y: auto;
   transition: 0.3s;
 }
+.navbar-mobile .ul-dark {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #4b4a4a;
+  overflow-y: auto;
+  transition: 0.3s;
+}
 
-.navbar-mobile a,
-.navbar-mobile a:focus {
+.navbar-mobile .ul-dark a,
+.navbar-mobile .ul-darka:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #ffffff;
+}
+.navbar-mobile .ul-dark a:hover,
+.navbar-mobile .ul-dark .active,
+.navbar-mobile .ul-dark li:hover>a {
+  color: #f39ef3;
+}
+.ul-light
+
+
+.navbar-mobile .ul-light a,
+.navbar-mobile .ul-light a:focus {
   padding: 10px 20px;
   font-size: 15px;
   color: #4b4a4a;
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile .ul-light a:hover,
+.navbar-mobile .ul-light .active,
+.navbar-mobile .ul-light li:hover>a {
   color: #69069e;
 }
 
@@ -1349,6 +1376,10 @@ blockquote {
 @media (min-width: 768px) and (max-width: 991px) {
 
   /* Navbar */
+  .ul-dark{
+    background-color: #292929;
+    color:white;
+  }
   nav {
     padding: 10px 15px;
   }
@@ -1759,7 +1790,7 @@ blockquote {
     margin-top: 0%;
     margin-left: calc(0% - 0px);
   }
-  
+
   #about .about-descr .p-heading {
     font-size: 20px;
   }

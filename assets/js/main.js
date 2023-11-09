@@ -262,13 +262,15 @@ if (document.cookie != ""){
 
 if(cookie_darkmode == true){
   //header dark
-
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+  
   document.getElementsByClassName("dm-light")[0].classList.add("dm-dark");
   document.getElementsByClassName("dm-light")[0].classList.remove("dm-light");
   
   document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
   document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
-  
+
   document.getElementsByClassName("header-light")[0].classList.add("header-dark");
   document.getElementsByClassName("header-light")[0].classList.remove("header-light");
 
@@ -392,7 +394,9 @@ button_darkmode.addEventListener("click", function() {
 function darkmode(){
   
   //header dark
-  
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
   document.getElementsByClassName("dm-light")[0].classList.add("dm-dark");
   document.getElementsByClassName("dm-light")[0].classList.remove("dm-light");
   
@@ -502,6 +506,8 @@ function darkmode(){
 }
 
 function lightmode(){
+  document.getElementsByClassName("ul-dark")[0].classList.add("ul-light");
+  document.getElementsByClassName("ul-dark")[0].classList.remove("ul-dark");
 
   document.getElementsByClassName("dm-dark")[0].classList.add("dm-light");
   document.getElementsByClassName("dm-dark")[0].classList.remove("dm-dark");
