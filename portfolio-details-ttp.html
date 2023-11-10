@@ -29,14 +29,13 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-inner-pages">
+  <header id="header" class="fixed-top header-light header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo"><img id="logo_img" src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
-        <ul>
+        <ul class="ul-light">
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
           <li><a class="nav-link  scrollto active" href="index.html#portfolio">Projects</a></li>
@@ -50,14 +49,14 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
+    <section class="breadcrumbs bread-light">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
           <h2>Trouve ton plat</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#portfolio">Projects</a></li>
+            <li><a id="text_1"href="index.html">Home</a></li>
+            <li><a id="text_2"href="index.html#portfolio">Projects</a></li>
             <li>Trouve ton plat</li>
           </ol>
         </div>
@@ -88,7 +87,7 @@
                 </div>
 
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination swiper-light"></div>
             </div>
           </div>
 
@@ -99,7 +98,7 @@
                 <li><strong>Category</strong>: Website</li>
                 <li><strong>Client</strong>: IUT Lyon 1 (mark project)</li>
                 <li><strong>Project date</strong>: 23 January, 2022</li>
-                <li><strong>Project URL</strong>: <a href="#">NOT AVAILABLE</a></li>
+                <li><strong>Project URL</strong>: <a id="text_3" href="#">NOT AVAILABLE</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
@@ -140,6 +139,7 @@
   </div><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a id="darkmode" class="darkmode-de dm-light d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -147,7 +147,137 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    var cookie_darkmode = false;
 
+if (document.cookie != ""){
+   var cookieValue = document.cookie.split('; ').find(row => row.startsWith('darkmode')).split('=')[1];
+   cookie_darkmode = cookieValue === "true";
+}
+
+
+  
+
+if(cookie_darkmode == true){
+  //header dark
+  console.log("Loading darkmode..")
+  
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
+  
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
+  
+  document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
+  document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
+
+  document.getElementsByClassName("header-light")[0].classList.add("header-dark");
+  document.getElementsByClassName("header-light")[0].classList.remove("header-light");
+
+
+  document.body.style.backgroundColor = "#1b1b1b"
+
+  document.getElementsByClassName("bread-light")[0].classList.add("bread-dark");
+  document.getElementsByClassName("bread-light")[0].classList.remove("bread-light");
+  document.getElementById("text_1").style.color = "white";
+  document.getElementById("text_2").style.color = "white";
+  document.getElementById("text_3").style.color = "white";
+
+  document.getElementById("logo_img").src = "assets/img/logo-dark.png";
+
+  document.getElementsByClassName("swiper-light")[0].classList.add("swiper-dark");
+  document.getElementsByClassName("swiper-light")[0].classList.remove("swiper-light");
+  }
+
+
+
+
+button_darkmode = document.getElementById("darkmode")
+ 
+button_darkmode.addEventListener("click", function() {
+  if(cookie_darkmode === false){
+    cookie_darkmode = true;
+    document.cookie = "darkmode=true; path=/"
+    darkmode()
+  }
+  else{
+    cookie_darkmode = false;
+    document.cookie = "darkmode=false; path=/"
+    lightmode()
+  } 
+ });
+
+function darkmode(){
+  
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
+  
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
+  
+  document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
+  document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
+
+  document.getElementsByClassName("header-light")[0].classList.add("header-dark");
+  document.getElementsByClassName("header-light")[0].classList.remove("header-light");
+
+
+  document.body.style.backgroundColor = "#1b1b1b"
+
+  document.getElementsByClassName("bread-light")[0].classList.add("bread-dark");
+  document.getElementsByClassName("bread-light")[0].classList.remove("bread-light");
+
+  document.getElementById("text_1").style.color = "white";
+  document.getElementById("text_2").style.color = "white";
+  document.getElementById("text_3").style.color = "white";
+
+  document.getElementById("logo_img").src = "assets/img/logo-dark.png";
+
+  document.getElementsByClassName("swiper-light")[0].classList.add("swiper-dark");
+  document.getElementsByClassName("swiper-light")[0].classList.remove("swiper-light");
+}
+
+function lightmode(){
+  document.getElementsByClassName("ul-dark")[0].classList.add("ul-light");
+  document.getElementsByClassName("ul-dark")[0].classList.remove("ul-dark");
+
+  var elements = document.querySelectorAll(".dm-dark");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-light");
+    elements[i].classList.remove("dm-dark");
+  }
+  
+  document.getElementsByClassName("bi-sun")[0].classList.add("bi-moon");
+  document.getElementsByClassName("bi-sun")[0].classList.remove("bi-sun");
+  
+  document.getElementsByClassName("header-dark")[0].classList.add("header-light");
+  document.getElementsByClassName("header-dark")[0].classList.remove("header-dark");
+
+  document.body.style.backgroundColor = "white"
+
+  document.getElementsByClassName("bread-dark")[0].classList.add("bread-light");
+  document.getElementsByClassName("bread-dark")[0].classList.remove("bread-dark");
+
+  document.getElementById("text_1").style.color = "#292929";
+  document.getElementById("text_2").style.color = "#292929";
+  document.getElementById("text_3").style.color = "#292929";
+
+  document.getElementById("logo_img").src = "assets/img/logo.png";
+
+  document.getElementsByClassName("swiper-dark")[0].classList.add("swiper-light");
+  document.getElementsByClassName("swiper-dark")[0].classList.remove("swiper-dark");
+}
+  </script>
 </body>
 
 </html>

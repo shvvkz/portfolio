@@ -211,6 +211,22 @@ p {
   line-height: 0;
 }
 
+.darkmode-de {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  z-index: 996;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+
+}
+
+.darkmode-de i {
+  font-size: 28px;
+  line-height: 0;
+}
+
 
 .darkmode.active {
   visibility: visible;
@@ -665,8 +681,19 @@ p {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 120px 0 0 0;
-  background-color: white;
   min-height: 40px;
+}
+.bread-light{
+  background-color: white;
+}
+.bread-dark{
+  background-color: #1b1b1b;
+}
+.text-light{
+  color: #292929;
+}
+.text-dark{
+  color : white;
 }
 
 @media (max-width: 992px) {
@@ -993,13 +1020,30 @@ p {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
   opacity: 1;
-  border: 1px solid #69069e;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #69069e;
+}
+
+.portfolio-details .swiper-light span{
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #fff;
+  border: 1px solid #69069e;
+}
+.portfolio-details .swiper-dark span{
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: #111111;
+  border: 1px solid #af70af;
+}
+
+#darkmode:hover{
+  cursor:pointer;
 }
 
 .portfolio-details .portfolio-info {
