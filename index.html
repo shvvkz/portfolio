@@ -114,7 +114,7 @@
           <div class="col-lg-7">
             <div class="about-descr">
 
-              <p class="p-heading">I'm Viggo Casciano, a 20-year-old aspiring software developer with a strong educational foundation. I hold a High School diploma and
+              <p class="p-heading">I'm <span class="viggo_span-light" >Viggo Casciano</span>, a 20-year-old aspiring software developer with a strong educational foundation. I hold a High School diploma and
                  a two-year technical degree.</p>
               <p class="separator">My passion for coding led me to become a full-stack developer. I'm well-versed in front-end languages like HTML, CSS, and JavaScript,
                 as well as back-end languages like PHP. 
@@ -356,7 +356,7 @@
     </div>
   </div><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top dm-light d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <a id="darkmode" class="darkmode dm-light d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
 
   <!-- Vendor JS Files -->
@@ -387,9 +387,17 @@ if(cookie_darkmode == true){
   
   document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
   document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
   
-  document.getElementsByClassName("dm-light")[0].classList.add("dm-dark");
-  document.getElementsByClassName("dm-light")[0].classList.remove("dm-light");
+
+  document.getElementsByClassName("viggo_span-light")[0].classList.add("viggo_span-dark");
+  document.getElementsByClassName("viggo_span-light")[0].classList.remove("viggo_span-light");
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
   
   document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
   document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
@@ -519,8 +527,14 @@ function darkmode(){
   document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
   document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
 
-  document.getElementsByClassName("dm-light")[0].classList.add("dm-dark");
-  document.getElementsByClassName("dm-light")[0].classList.remove("dm-light");
+  document.getElementsByClassName("viggo_span-light")[0].classList.add("viggo_span-dark");
+  document.getElementsByClassName("viggo_span-light")[0].classList.remove("viggo_span-light");
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
   
   document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
   document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
@@ -631,8 +645,14 @@ function lightmode(){
   document.getElementsByClassName("ul-dark")[0].classList.add("ul-light");
   document.getElementsByClassName("ul-dark")[0].classList.remove("ul-dark");
 
-  document.getElementsByClassName("dm-dark")[0].classList.add("dm-light");
-  document.getElementsByClassName("dm-dark")[0].classList.remove("dm-dark");
+  document.getElementsByClassName("viggo_span-dark")[0].classList.add("viggo_span-light");
+  document.getElementsByClassName("viggo_span-dark")[0].classList.remove("viggo_span-dark");
+
+  var elements = document.querySelectorAll(".dm-dark");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-light");
+    elements[i].classList.remove("dm-dark");
+  }
   
   document.getElementsByClassName("bi-sun")[0].classList.add("bi-moon");
   document.getElementsByClassName("bi-sun")[0].classList.remove("bi-sun");

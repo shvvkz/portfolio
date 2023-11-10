@@ -155,7 +155,6 @@ p {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #69069e;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -181,7 +180,6 @@ p {
   background: #69069e;
   color: #e7e7e7;
   transition: all 0.4s;
-  box-shadow: 2px 2px 5px 0px rgb(0, 0, 0);
 }
 .dm-light:hover{
   background: #a336dd;
@@ -191,7 +189,6 @@ p {
   background: #f39ef3;
   color: #ffffff;
   transition: all 0.4s;
-  box-shadow: 2px 2px 5px 0px rgb(255, 255, 255);
 }
 .dm-dark:hover{
   background: #f5bef5;
@@ -220,6 +217,12 @@ p {
   opacity: 1;
 }
 
+.viggo_span-light{
+  color:#69069e;
+}
+.viggo_span-dark{
+  color:#f39ef3;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -324,7 +327,7 @@ p {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: #000000;
+  background: #111111;
   border: 2px solid #553755;
 }
 
@@ -744,7 +747,7 @@ p {
 .paddsection-2-dark{
   padding-top: 90px;
   padding-bottom: 90px;
-  background: #000000;  
+  background: #111111;  
 }
 
 #about .div-img-bg {
@@ -857,7 +860,7 @@ p {
   width: 12px;
   height: 12px;
   opacity: 1;
-  background-color: #000000;
+  background-color: #111111;
   border: 1px solid #af70af;
 }
 
@@ -1317,7 +1320,7 @@ blockquote {
   padding-bottom: 50px;
 }
 .footer-dark{
-  background: #000000;
+  background: #111111;
 }
 .footer-light{
   background: #ffffff;
