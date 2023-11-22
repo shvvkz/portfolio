@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Projects details - Audio Visualizer</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top header-light header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo"><img id="logo_img" src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul class="ul-light">
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link  scrollto active" href="index.html#portfolio">Projects</a></li>
+          <li><a class="nav-link  scrollto" href="index.html#resume">Resume</a></li>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs bread-light">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Trouve ton plat</h2>
+          <ol>
+            <li><a id="text_1"href="index.html">Home</a></li>
+            <li><a id="text_2"href="index.html#portfolio">Projects</a></li>
+            <li>Trouve ton plat</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/audioVisualizer.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination swiper-light"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Website</li>
+                <li><strong>Client</strong>:None</li>
+                <li><strong>Project date</strong>: 22 November, 2023</li>
+                <li><strong>Project URL</strong>: <a id="text_3" href="https://audio-visualizer-mauve.vercel.app/">CLICK HERE</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Trouve ton plat's detail:</h2>
+              <p>
+                This website is done with THREE.JS. It's a website where you can put an audio file, and the sphere will move following the song.  
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="https://forge.univ-lyon1.fr/p2103919"><i class="bi bi-gitlab"></i></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Viggo Casciano. All rights reserved.</p>
+
+      <div class="credits">
+        Designed by Viggo Casciano
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a id="darkmode" class="darkmode-de dm-light d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    var cookie_darkmode = false;
+
+if (document.cookie != ""){
+   var cookieValue = document.cookie.split('; ').find(row => row.startsWith('darkmode')).split('=')[1];
+   cookie_darkmode = cookieValue === "true";
+}
+
+
+  
+
+if(cookie_darkmode == true){
+  //header dark
+  console.log("Loading darkmode..")
+  
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
+  
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
+  
+  document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
+  document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
+
+  document.getElementsByClassName("header-light")[0].classList.add("header-dark");
+  document.getElementsByClassName("header-light")[0].classList.remove("header-light");
+
+
+  document.body.style.backgroundColor = "#1b1b1b"
+
+  document.getElementsByClassName("bread-light")[0].classList.add("bread-dark");
+  document.getElementsByClassName("bread-light")[0].classList.remove("bread-light");
+  document.getElementById("text_1").style.color = "white";
+  document.getElementById("text_2").style.color = "white";
+  document.getElementById("text_3").style.color = "white";
+
+  document.getElementById("logo_img").src = "assets/img/logo-dark.png";
+
+  document.getElementsByClassName("swiper-light")[0].classList.add("swiper-dark");
+  document.getElementsByClassName("swiper-light")[0].classList.remove("swiper-light");
+  }
+
+
+
+
+button_darkmode = document.getElementById("darkmode")
+ 
+button_darkmode.addEventListener("click", function() {
+  if(cookie_darkmode === false){
+    cookie_darkmode = true;
+    document.cookie = "darkmode=true; path=/"
+    darkmode()
+  }
+  else{
+    cookie_darkmode = false;
+    document.cookie = "darkmode=false; path=/"
+    lightmode()
+  } 
+ });
+
+function darkmode(){
+  
+  document.getElementsByClassName("ul-light")[0].classList.add("ul-dark");
+  document.getElementsByClassName("ul-light")[0].classList.remove("ul-light");
+
+  
+
+  var elements = document.querySelectorAll(".dm-light");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-dark");
+    elements[i].classList.remove("dm-light");
+  }
+  
+  document.getElementsByClassName("bi-moon")[0].classList.add("bi-sun");
+  document.getElementsByClassName("bi-moon")[0].classList.remove("bi-moon");
+
+  document.getElementsByClassName("header-light")[0].classList.add("header-dark");
+  document.getElementsByClassName("header-light")[0].classList.remove("header-light");
+
+
+  document.body.style.backgroundColor = "#1b1b1b"
+
+  document.getElementsByClassName("bread-light")[0].classList.add("bread-dark");
+  document.getElementsByClassName("bread-light")[0].classList.remove("bread-light");
+
+  document.getElementById("text_1").style.color = "white";
+  document.getElementById("text_2").style.color = "white";
+  document.getElementById("text_3").style.color = "white";
+
+  document.getElementById("logo_img").src = "assets/img/logo-dark.png";
+
+  document.getElementsByClassName("swiper-light")[0].classList.add("swiper-dark");
+  document.getElementsByClassName("swiper-light")[0].classList.remove("swiper-light");
+}
+
+function lightmode(){
+  document.getElementsByClassName("ul-dark")[0].classList.add("ul-light");
+  document.getElementsByClassName("ul-dark")[0].classList.remove("ul-dark");
+
+  var elements = document.querySelectorAll(".dm-dark");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.add("dm-light");
+    elements[i].classList.remove("dm-dark");
+  }
+  
+  document.getElementsByClassName("bi-sun")[0].classList.add("bi-moon");
+  document.getElementsByClassName("bi-sun")[0].classList.remove("bi-sun");
+  
+  document.getElementsByClassName("header-dark")[0].classList.add("header-light");
+  document.getElementsByClassName("header-dark")[0].classList.remove("header-dark");
+
+  document.body.style.backgroundColor = "white"
+
+  document.getElementsByClassName("bread-dark")[0].classList.add("bread-light");
+  document.getElementsByClassName("bread-dark")[0].classList.remove("bread-dark");
+
+  document.getElementById("text_1").style.color = "#292929";
+  document.getElementById("text_2").style.color = "#292929";
+  document.getElementById("text_3").style.color = "#292929";
+
+  document.getElementById("logo_img").src = "assets/img/logo.png";
+
+  document.getElementsByClassName("swiper-dark")[0].classList.add("swiper-light");
+  document.getElementsByClassName("swiper-dark")[0].classList.remove("swiper-dark");
+}
+  </script>
+</body>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</html>
