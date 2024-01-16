@@ -1943,3 +1943,37 @@ blockquote {
     margin-top: 1.5vh;
   }
 }
+::-webkit-scrollbar {
+  width: 13px;
+  transition: 0.3s;
+}
+
+.dark::-webkit-scrollbar-track {
+  background: #000000;
+  transition: 0.3s;
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #f39ef3;
+  transition: 0.3s;
+}
+
+.dark::-webkit-scrollbar-thumb:hover {
+  background: #f5bef5;
+  transition: 0.3s;
+}
+
+.light::-webkit-scrollbar-track {
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.light::-webkit-scrollbar-thumb {
+  background: #69069e;
+  transition: 0.3s;
+}
+
+.light::-webkit-scrollbar-thumb:hover {
+  background: #c580c5;
+  transition: 0.3s;
+}
