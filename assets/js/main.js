@@ -263,3 +263,82 @@
 })()
 
 
+const showDetail1 = document.getElementById('showDetail1');
+const showDetail2 = document.getElementById('showDetail2');
+const showDetail3 = document.getElementById('showDetail3');
+const showDetail4 = document.getElementById('showDetail4');
+const showDetail5 = document.getElementById('showDetail5');
+const showDetail6 = document.getElementById('showDetail6');
+
+const detail1 = document.getElementById('detail1');
+const detail2 = document.getElementById('detail2');
+const detail3 = document.getElementById('detail3');
+const detail4 = document.getElementById('detail4');
+const detail5 = document.getElementById('detail5');
+const detail6 = document.getElementById('detail6');
+
+showDetail1.addEventListener('click', () => {
+  if (detail1.style.display === 'block') {
+    showDetail1.innerHTML = 'Afficher les détails des compétences';
+    detail1.style.display = 'none';
+  }
+  else {
+    showDetail1.innerHTML = 'Ne plus afficher';
+    detail1.style.display = 'block';
+  }
+});
+
+showDetail2.addEventListener('click', () => {
+  if (detail2.style.display === 'block') {
+    showDetail2.innerHTML = 'Afficher les détails des compétences';
+    detail2.style.display = 'none';
+  }
+  else {
+    showDetail2.innerHTML = 'Ne plus afficher';
+    detail2.style.display = 'block';
+  }
+});
+
+showDetail3.addEventListener('click', () => {
+  if (detail3.style.display === 'block') {
+    showDetail3.innerHTML = 'Afficher les détails des compétences';
+    detail3.style.display = 'none';
+  }
+  else {
+    showDetail3.innerHTML = 'Ne plus afficher';
+    detail3.style.display = 'block';
+  }
+});
+
+showDetail4.addEventListener('click', () => {
+  if (detail4.style.display === 'block') {
+    showDetail4.innerHTML = 'Afficher les détails des compétences';
+    detail4.style.display = 'none';
+  }
+  else {
+    showDetail4.innerHTML = 'Ne plus afficher';
+    detail4.style.display = 'block';
+  }
+});
+
+showDetail5.addEventListener('click', () => {
+  if (detail5.style.display === 'block') {
+    showDetail5.innerHTML = 'Afficher les détails des compétences';
+    detail5.style.display = 'none';
+  }
+  else {
+    showDetail5.innerHTML = 'Ne plus afficher';
+    detail5.style.display = 'block';
+  }
+});
+
+showDetail6.addEventListener('click', () => {
+  if (detail6.style.display === 'block') {
+    showDetail6.innerHTML = 'Afficher les détails des compétences';
+    detail6.style.display = 'none';
+  }
+  else {
+    showDetail6.innerHTML = 'Ne plus afficher';
+    detail6.style.display = 'block';
+  }
+});

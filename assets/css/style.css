@@ -2066,3 +2066,71 @@ blockquote {
 .dark::-webkit-scrollbar-button:single-button:vertical:increment:active {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(245, 190, 245)'><polygon points='0,0 100,0 50,50'/></svg>");
 }
+
+.skills-light{
+  background-color: #fff;
+}
+.skills-dark{
+  background-color: #111111;
+}
+.skill-light{
+  margin-top: 3vh;
+  border: #69069e solid 2px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.skill-dark{
+  margin-top: 3vh;
+  border: #f39ef3 solid 2px;
+  background-color: #1b1b1b;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.titre-skill-dark {
+  color: #f39ef3;
+  font-size: 22px;
+  font-weight: 700;
+}
+.titre-skill-light {
+  color: #69069e;
+  font-size: 22px;
+  font-weight: 700;
+}
+.titre-skill-dark {
+  color: #f39ef3;
+  font-size: 22px;
+  font-weight: 700;
+}
+.getMoreDetails{
+  width: 100%;
+}
+
+.full-width-table {
+  width: 100%;
+  border-collapse: collapse; /* Pour enlever les espaces entre les cellules */
+}
+
+.full-width-table th, .full-width-table td {
+  border: 1px solid #ddd; /* Bordure pour les cellules */
+  padding: 8px; /* Espacement à l'intérieur des cellules */
+}
+
+.full-width-table-light th {
+
+  text-align: left; /* Alignement du texte */
+}
+
+.full-width-table th {
+
+  text-align: left; /* Alignement du texte */
+}
+
+.showDetail{
+  text-decoration: underline;
+}
+.showDetail:hover{
+  cursor: pointer;
+}
