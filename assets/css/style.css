@@ -2212,59 +2212,70 @@ blockquote {
 .showDetail:hover{
   cursor: pointer;
 }
-
-.container-button-techno{
-  width: 35vw;
+.container-button-techno {
+  width: 80%;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 10px; /* Espace entre les boutons */
 }
 
-.button-techno-light{
+.button-techno-light {
   background-color: #f7f7f7;
   color: #69069e;
   border: 2px solid #69069e;
   border-radius: 10px;
   padding: 10px;
   transition: all 0.3s ease;
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 120px;
+  margin: 5px; /* Espace autour de chaque bouton */
 }
 
-.button-techno-dark{
+.button-techno-dark {
   background-color: #1b1b1b;
   color: #f39ef3;
   border: 2px solid #f39ef3;
   border-radius: 10px;
   padding: 10px;
   transition: all 0.3s ease;
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 120px;
+  margin: 5px; /* Espace autour de chaque bouton */
 }
 
-.button-techno-light:hover{
+.button-techno-light:hover {
   background-color: #69069e;
   color: #f7f7f7;
   cursor: pointer;
 }
 
-.button-techno-dark:hover{
+.button-techno-dark:hover {
   background-color: #f39ef3;
   color: #1b1b1b;
   cursor: pointer;
 }
 
-.techno-selected-light{
+.techno-selected-light {
   background-color: #69069e;
   color: #f7f7f7;
 }
 
-.techno-selected-dark{
+.techno-selected-dark {
   background-color: #f39ef3;
   color: #1b1b1b;
 }
 
-.container-bloc-techno{
-/* wrap as 5*/
-  width: 65vh;
+.container-bloc-techno {
   display: flex;
-  justify-content: flex-start;
-  
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .bloc-techno-light {
@@ -2274,28 +2285,13 @@ blockquote {
   border-radius: 10px;
   padding: 10px;
   margin-top: 2vh;
-  width: 12vh;
-  height: 12vh;
-  margin-right: 1vh;
   display: flex;
-  flex-direction: column; /* Pour aligner le contenu verticalement */
-  align-items: center; /* Pour centrer l'image horizontalement */
-  justify-content: center; /* Pour centrer le contenu verticalement */
-  text-align: center; /* Pour centrer le texte horizontalement */
-}
-
-.bloc-techno-light p {
-  color: #69069e;
-  font-weight: 800;
-  margin-top: 0; /* Supprime la marge par défaut du haut */
-  margin-bottom: 0.5vh; /* Ajoute un espace entre le texte et l'icône */
-  font-size: 1.3vh; /* Ajuste la taille du texte */
-}
-
-.bloc-techno-light i {
-  font-size: 4rem; /* Ajuste la taille de l'icône Devicon */
-  margin-top: auto;
-  margin-bottom: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 calc(20% - 10px); /* 5 éléments par ligne */
+  box-sizing: border-box;
 }
 
 .bloc-techno-dark {
@@ -2305,26 +2301,57 @@ blockquote {
   border-radius: 10px;
   padding: 10px;
   margin-top: 2vh;
-  width: 12vh;
-  height: 12vh;
-  margin-right: 1vh;
   display: flex;
-  flex-direction: column; /* Pour aligner le contenu verticalement */
-  align-items: center; /* Pour centrer l'image horizontalement */
-  justify-content: center; /* Pour centrer le contenu verticalement */
-  text-align: center; /* Pour centrer le texte horizontalement */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1 1 calc(20% - 10px); /* 5 éléments par ligne */
+  box-sizing: border-box;
+}
+
+.bloc-techno-light p {
+  color: #69069e;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0.5vh;
+  font-size: 1.3vh;
 }
 
 .bloc-techno-dark p {
   color: #f39ef3;
   font-weight: 800;
-  margin-top: 0; /* Supprime la marge par défaut du haut */
-  margin-bottom: 0.5vh; /* Ajoute un espace entre le texte et l'icône */
-  font-size: 1.3vh; /* Ajuste la taille du texte */
+  margin-top: 0;
+  margin-bottom: 0.5vh;
+  font-size: 1.3vh;
+}
+
+.bloc-techno-light i {
+  font-size: 4rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .bloc-techno-dark i {
-  font-size: 4rem; /* Ajuste la taille de l'icône Devicon */
+  font-size: 4rem;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+@media (max-width: 1024px) {
+  .bloc-techno-light, .bloc-techno-dark {
+    flex: 1 1 calc(33.33% - 10px); /* 3 éléments par ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .bloc-techno-light, .bloc-techno-dark {
+    flex: 1 1 calc(50% - 10px); /* 2 éléments par ligne */
+  }
+}
+
+@media (max-width: 480px) {
+  .bloc-techno-light, .bloc-techno-dark {
+    flex: 1 1 calc(100% - 20px); /* 1 élément par ligne */
+  }
 }
