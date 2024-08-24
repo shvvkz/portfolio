@@ -355,6 +355,78 @@ p {
   margin-bottom: 10px;
   color:#8b8b8b;
 }
+.techno-light{
+  background-color: #f7f7f7;
+}
+.techno-dark{
+  background-color: #1b1b1b;
+}
+.techno .techno-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.techno-title-light{
+  color:#45505b;
+}
+.techno-title-dark{
+  color:#8397ab;
+}
+
+.techno-item-light{
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #661094;
+  position: relative;
+}
+
+.techno-item-dark{
+  border-left: 2px solid #553755;
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  position: relative;
+}
+.techno .techno-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+.techno-item-light::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #69069e;
+}
+.techno-item-dark::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #111111;
+  border: 2px solid #553755;
+}
+
+.techno .techno-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color:#8b8b8b;
+}
+
 .h5-dark{
   background: #1b1b1b;
 }
@@ -2066,6 +2138,12 @@ blockquote {
 .dark::-webkit-scrollbar-button:single-button:vertical:increment:active {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(245, 190, 245)'><polygon points='0,0 100,0 50,50'/></svg>");
 }
+.dark{
+  background-color: #1b1b1b;
+}
+.light{
+  background-color: #f7f7f7;
+}
 
 .skills-light{
   background-color: #fff;
@@ -2133,4 +2211,120 @@ blockquote {
 }
 .showDetail:hover{
   cursor: pointer;
+}
+
+.container-button-techno{
+  width: 35vw;
+  display: flex;
+  justify-content:space-around;
+}
+
+.button-techno-light{
+  background-color: #f7f7f7;
+  color: #69069e;
+  border: 2px solid #69069e;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.button-techno-dark{
+  background-color: #1b1b1b;
+  color: #f39ef3;
+  border: 2px solid #f39ef3;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.button-techno-light:hover{
+  background-color: #69069e;
+  color: #f7f7f7;
+  cursor: pointer;
+}
+
+.button-techno-dark:hover{
+  background-color: #f39ef3;
+  color: #1b1b1b;
+  cursor: pointer;
+}
+
+.techno-selected-light{
+  background-color: #69069e;
+  color: #f7f7f7;
+}
+
+.techno-selected-dark{
+  background-color: #f39ef3;
+  color: #1b1b1b;
+}
+
+.container-bloc-techno{
+/* wrap as 5*/
+  width: 65vh;
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.bloc-techno-light {
+  background-color: #f7f7f7;
+  color: #69069e;
+  border: 2px solid #69069e;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 2vh;
+  width: 12vh;
+  height: 12vh;
+  margin-right: 1vh;
+  display: flex;
+  flex-direction: column; /* Pour aligner le contenu verticalement */
+  align-items: center; /* Pour centrer l'image horizontalement */
+  justify-content: center; /* Pour centrer le contenu verticalement */
+  text-align: center; /* Pour centrer le texte horizontalement */
+}
+
+.bloc-techno-light p {
+  color: #69069e;
+  font-weight: 800;
+  margin-top: 0; /* Supprime la marge par défaut du haut */
+  margin-bottom: 0.5vh; /* Ajoute un espace entre le texte et l'icône */
+  font-size: 1.3vh; /* Ajuste la taille du texte */
+}
+
+.bloc-techno-light i {
+  font-size: 4rem; /* Ajuste la taille de l'icône Devicon */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bloc-techno-dark {
+  background-color: #1b1b1b;
+  color: #f39ef3;
+  border: 2px solid #f39ef3;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 2vh;
+  width: 12vh;
+  height: 12vh;
+  margin-right: 1vh;
+  display: flex;
+  flex-direction: column; /* Pour aligner le contenu verticalement */
+  align-items: center; /* Pour centrer l'image horizontalement */
+  justify-content: center; /* Pour centrer le contenu verticalement */
+  text-align: center; /* Pour centrer le texte horizontalement */
+}
+
+.bloc-techno-dark p {
+  color: #f39ef3;
+  font-weight: 800;
+  margin-top: 0; /* Supprime la marge par défaut du haut */
+  margin-bottom: 0.5vh; /* Ajoute un espace entre le texte et l'icône */
+  font-size: 1.3vh; /* Ajuste la taille du texte */
+}
+
+.bloc-techno-dark i {
+  font-size: 4rem; /* Ajuste la taille de l'icône Devicon */
+  margin-top: auto;
+  margin-bottom: auto;
 }

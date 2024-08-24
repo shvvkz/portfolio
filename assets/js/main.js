@@ -279,7 +279,7 @@ const detail6 = document.getElementById('detail6');
 
 showDetail1.addEventListener('click', () => {
   if (detail1.style.display === 'block') {
-    showDetail1.innerHTML = 'Afficher les détails des compétences';
+    showDetail1.innerHTML = 'Afficher plus de détails';
     detail1.style.display = 'none';
   }
   else {
@@ -290,7 +290,7 @@ showDetail1.addEventListener('click', () => {
 
 showDetail2.addEventListener('click', () => {
   if (detail2.style.display === 'block') {
-    showDetail2.innerHTML = 'Afficher les détails des compétences';
+    showDetail2.innerHTML = 'Afficher plus de détails';
     detail2.style.display = 'none';
   }
   else {
@@ -301,7 +301,7 @@ showDetail2.addEventListener('click', () => {
 
 showDetail3.addEventListener('click', () => {
   if (detail3.style.display === 'block') {
-    showDetail3.innerHTML = 'Afficher les détails des compétences';
+    showDetail3.innerHTML = 'Afficher plus de détails';
     detail3.style.display = 'none';
   }
   else {
@@ -312,7 +312,7 @@ showDetail3.addEventListener('click', () => {
 
 showDetail4.addEventListener('click', () => {
   if (detail4.style.display === 'block') {
-    showDetail4.innerHTML = 'Afficher les détails des compétences';
+    showDetail4.innerHTML = 'Afficher plus de détails';
     detail4.style.display = 'none';
   }
   else {
@@ -323,7 +323,7 @@ showDetail4.addEventListener('click', () => {
 
 showDetail5.addEventListener('click', () => {
   if (detail5.style.display === 'block') {
-    showDetail5.innerHTML = 'Afficher les détails des compétences';
+    showDetail5.innerHTML = 'Afficher plus de détails';
     detail5.style.display = 'none';
   }
   else {
@@ -334,11 +334,39 @@ showDetail5.addEventListener('click', () => {
 
 showDetail6.addEventListener('click', () => {
   if (detail6.style.display === 'block') {
-    showDetail6.innerHTML = 'Afficher les détails des compétences';
+    showDetail6.innerHTML = 'Afficher plus de détails';
     detail6.style.display = 'none';
   }
   else {
     showDetail6.innerHTML = 'Ne plus afficher';
     detail6.style.display = 'block';
   }
+});
+
+
+// met dans une liste les fils de container-button-techno
+const techno_buttons = document.querySelectorAll('.container-button-techno > div');
+const techno_details = [document.getElementById('techno-language'), document.getElementById('techno-framework'), document.getElementById('techno-database'), document.getElementById('techno-devtool'), document.getElementById('techno-devops')];
+
+// pour chaque bouton, on ajoute un event listener
+techno_buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // on cache tous les détails
+    // on donne la classe techno-selected au bouton cliqué
+    techno_buttons.forEach(button => {
+      button.classList.remove('techno-selected-light');
+      button.classList.remove('techno-selected-dark')
+    });
+    // si le nom de la classe du button est button-techno-light on lui ajoute en light sinon en dark
+    if (button.classList.contains('button-techno-light')) {
+      button.classList.add('techno-selected-light');
+    } else {
+      button.classList.add('techno-selected-dark');
+    }
+    techno_details.forEach(detail => {
+      detail.style.display = 'none';
+    });
+    // on affiche le détail correspondant
+    techno_details[index].style.display = 'block';
+  });
 });
